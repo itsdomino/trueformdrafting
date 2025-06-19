@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title 1 | True Form Drafting</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for menu icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<header class="header project-stripe">
+  <div class="nav-container">
+    <a href="index.html" class="logo-link">
+      <img src="assets/TRUEFORMDrafting Logo short.svg" alt="True Form Logo" class="logo" />
+    </a>
+    <nav>
+     <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="section light project-detail-section">
+  <div class="container project-detail-nav-wrapper">
+    <a class="project-arrow left" href="project4.html" title="Previous Project" id="prevProject" data-href="project4.html">&#x2039;</a>
+    <div class="project-detail-content">
+      <h2>Project Title 1</h2>
+      <!-- Project Gallery -->
+      <div class="project-gallery">
+        <img src="assets/portfolio1.jpg" alt="Project 1 - Main Image" class="gallery-image">
+        <img src="assets/portfolio1b.jpg" alt="Project 1 - Image 2" class="gallery-image">
+        <img src="assets/portfolio1c.jpg" alt="Project 1 - Image 3" class="gallery-image">
+      </div>
+      <p>
+        Describe Project 1 here. Add images, diagrams, and information about your role, software used, and project highlights.
+      </p>
+      <a href="index.html#portfolio" class="back-link">&#8592; Back to Portfolio</a>
+    </div>
+    <a class="project-arrow right" href="project2.html" title="Next Project" id="nextProject" data-href="project2.html">&#x203A;</a>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close" id="lightboxClose">&times;</span>
+  <span class="lightbox-arrow lightbox-arrow-left" id="lightboxArrowLeft">&#10094;</span>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Expanded Project Image">
+  <span class="lightbox-arrow lightbox-arrow-right" id="lightboxArrowRight">&#10095;</span>
+</div>
+
+<script>
+  // Hamburger menu for mobile
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  // Lightbox logic with navigation
+  const galleryImages = Array.from(document.querySelectorAll('.gallery-image'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxArrowLeft = document.getElementById('lightboxArrowLeft');
+  const lightboxArrowRight = document.getElementById('lightboxArrowRight');
+  let currentIndex = 0;
+
+  function showLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = galleryImages[index].src;
+    lightbox.classList.add('show');
+  }
+
+  galleryImages.forEach((img, idx) => {
+    img.addEventListener('click', () => showLightbox(idx));
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('show');
+    lightboxImg.src = '';
+  }
+
+  function showPrev(e) {
+    if (e) e.stopPropagation();
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentIndex].src;
+  }
+
+  function showNext(e) {
+    if (e) e.stopPropagation();
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentIndex].src;
+  }
+
+  lightboxClose.onclick = closeLightbox;
+  lightboxArrowLeft.onclick = showPrev;
+  lightboxArrowRight.onclick = showNext;
+
+  // Close on overlay click
+  lightbox.onclick = function(e) {
+    if (e.target === lightbox) closeLightbox();
+  };
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    const lightboxOpen = lightbox.classList.contains('show');
+    if (lightboxOpen) {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'ArrowRight') showNext();
+      return; // Don't allow project navigation when lightbox is open
+    }
+
+    // Project navigation (when lightbox is closed)
+    if (e.key === 'ArrowLeft') {
+      const prev = document.getElementById('prevProject');
+      if (prev) window.location.href = prev.getAttribute('data-href');
+    }
+    if (e.key === 'ArrowRight') {
+      const next = document.getElementById('nextProject');
+      if (next) window.location.href = next.getAttribute('data-href');
+    }
+  });
+</script>
+</body>
+</html>
