@@ -24,7 +24,7 @@ body {
 }
 .header.scrolled,
 .header.project-stripe {
-  background: #2c3639cc;
+  background: #2c3639cc; /* semi-transparent dark stripe */
   box-shadow: 0 2px 8px rgba(44,54,57,0.13);
 }
 .nav-container {
@@ -107,7 +107,7 @@ nav {
 .section {
   padding: 80px 0;
   text-align: center;
-  padding-top: 140px;
+  padding-top: 140px; /* increase top padding for header */
 }
 .section .container {
   max-width: 900px;
@@ -286,10 +286,15 @@ nav {
 /* PORTFOLIO GRID */
 .portfolio-grid {
   display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  gap: 30px;
+  margin-top: 30px;
+}
+.portfolio-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   margin-top: 30px;
-  justify-items: center;
 }
 
 .portfolio-card {
@@ -302,18 +307,16 @@ nav {
   margin: 0;
   text-decoration: none;
   color: inherit;
-  width: 100%;
-  max-width: 340px;
 }
 
 .portfolio-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 3; /* or adjust to fit your images */
   object-fit: cover;
   border-radius: 0;
   box-shadow: none;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   transition: transform 0.2s;
 }
@@ -352,11 +355,11 @@ footer .socials a:hover {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  width: 70px;
+  width: 70px; /* Adjust size as needed */
   height: auto;
   z-index: 50;
   opacity: 0.95;
-  pointer-events: none;
+  pointer-events: none; /* So it doesn't block clicks */
   transition: opacity 0.2s;
 }
 
@@ -366,24 +369,31 @@ footer .socials a:hover {
     right: 8px;
     bottom: 8px;
   }
+}
+
+/* --- Responsive Portfolio Grid --- */
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section img {
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
-    justify-items: center;
-  }
-  .portfolio-card {
-    width: 90vw;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-  .portfolio-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
   }
   .hero-content h1 {
     font-size: 2.1rem;
+  }
+  .portfolio-card {
+    width: 98vw;
   }
 }
 
@@ -412,7 +422,47 @@ footer .socials a:hover {
     padding: 20px 10px;
   }
 }
+/* Lightbox Overlay Styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
 
+.lightbox-img {
+  max-width: 95vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+  background: #fff;
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 28px; right: 56px;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  user-select: none;
+  transition: color 0.2s;
+}
+.lightbox-close:hover {
+  color: #a27b5b;
+}
+
+@media (max-width: 600px) {
+  .lightbox-close {
+    top: 12px; right: 20px; font-size: 2.2rem;
+  }
+}
 /* Lightbox Overlay Styles */
 .lightbox {
   display: none;
@@ -430,11 +480,11 @@ footer .socials a:hover {
 .lightbox-img {
   max-width: 95vw;
   max-height: 90vh;
-  border-radius: 12px !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
   background: #fff;
   display: block;
   z-index: 1;
-  object-fit: contain;
 }
 .lightbox-close {
   position: absolute;
@@ -475,12 +525,11 @@ footer .socials a:hover {
   right: 32px;
 }
 @media (max-width:600px) {
+  .lightbox-close { top: 10px; right: 12px; font-size: 2rem;}
   .lightbox-arrow { font-size: 2rem; left: 8px; right: 8px; }
   .lightbox-arrow-left { left: 8px;}
   .lightbox-arrow-right { right: 8px;}
 }
-
-/* Testimonials */
 .testimonial-grid {
   display: flex;
   gap: 1.2rem;
