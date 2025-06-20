@@ -210,22 +210,21 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2000;
+  font-size: 2.4rem;
+  color: #222;         /* plane dark color */
+  background: none;    /* remove circle */
+  border: none;        /* no border */
+  box-shadow: none;    /* no shadow */
+  border-radius: 0;    /* no roundness */
+  padding: 0;          /* no extra space around arrow */
+  cursor: pointer;
+  user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.4rem;
-  color: #a27b5b;
-  background: rgba(44,54,57,0.23);
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
   text-decoration: none;
-  padding: 0 14px;
-  box-shadow: 0 2px 8px rgba(44,54,57,0.13);
-  transition: color 0.2s, background 0.2s;
-  user-select: none;
+  transition: color 0.2s;
 }
-/* Left and right positioning */
 .project-fixed-arrow.left {
   left: 24px;
 }
@@ -234,18 +233,12 @@ nav {
 }
 .project-fixed-arrow:hover,
 .project-fixed-arrow:focus {
-  color: #2c3639;
-  background: #f4f4f4;
+  color: #000;   /* slightly darker on hover */
+  background: none;
 }
-
-/* Responsive adjustments for mobile (smaller arrows, closer to edges) */
 @media (max-width: 900px) {
-  .project-detail-nav-wrapper {
-    gap: 8px;
-  }
   .project-fixed-arrow {
     font-size: 2rem;
-    padding: 0 10px;
   }
   .project-fixed-arrow.left {
     left: 8px;
@@ -255,12 +248,8 @@ nav {
   }
 }
 @media (max-width: 600px) {
-  .project-detail-nav-wrapper {
-    gap: 0;
-  }
   .project-fixed-arrow {
     font-size: 1.7rem;
-    padding: 0 7px;
   }
   .project-fixed-arrow.left {
     left: 3px;
