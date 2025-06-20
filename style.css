@@ -431,7 +431,6 @@ footer .socials a:hover {
   max-width: 95vw;
   max-height: 90vh;
   border-radius: 12px !important;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
   background: #fff;
   display: block;
   z-index: 1;
@@ -476,7 +475,6 @@ footer .socials a:hover {
   right: 32px;
 }
 @media (max-width:600px) {
-  .lightbox-close { top: 10px; right: 12px; font-size: 2rem;}
   .lightbox-arrow { font-size: 2rem; left: 8px; right: 8px; }
   .lightbox-arrow-left { left: 8px;}
   .lightbox-arrow-right { right: 8px;}
