@@ -1,4 +1,6 @@
-/* Basic Reset & Body */
+/* =======================
+   Basic Reset & Body
+   ======================= */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,9 @@ body {
   color: #2c3639;
 }
 
-/* HEADER & NAVIGATION */
+/* =======================
+   Header & Navigation
+   ======================= */
 .header {
   position: fixed;
   top: 0;
@@ -24,7 +28,7 @@ body {
 }
 .header.scrolled,
 .header.project-stripe {
-  background: #2c3639cc; /* semi-transparent dark stripe */
+  background: #2c3639cc;
   box-shadow: 0 2px 8px rgba(44,54,57,0.13);
 }
 .nav-container {
@@ -77,7 +81,9 @@ nav {
   margin-left: 20px;
 }
 
-/* HERO SECTION */
+/* =======================
+   Hero Section
+   ======================= */
 .hero {
   height: 100vh;
   min-height: 500px;
@@ -103,27 +109,31 @@ nav {
   text-shadow: 1px 1px 8px rgba(0,0,0,0.2);
 }
 
-/* SECTIONS */
+/* =======================
+   Sections
+   ======================= */
 .section {
   padding: 80px 0;
   text-align: center;
-  padding-top: 140px; /* increase top padding for header */
+  padding-top: 140px;
 }
 .section .container {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
 }
-.section.light {
-  background: #f4f4f4;
-  color: #2c3639;
-}
-.section.dark {
-  background: #2c3639;
-  color: #f4f4f4;
-}
 
-/* ABOUT SECTION */
+/* Alternating Section Backgrounds */
+#portfolio.section { background: #fff; }
+#about.section { background: #f4f4f4; }
+#services.section { background: #2c3639; color: #f4f4f4; }
+#testimonials.section { background: #f4f4f4; }
+#contact.section { background: #2c3639; color: #f4f4f4; }
+
+
+/* =======================
+   About Section
+   ======================= */
 .about-flex {
   display: flex;
   align-items: center;
@@ -159,7 +169,9 @@ nav {
   }
 }
 
-/* PROJECT PAGE IMAGES */
+/* =======================
+   Project Page Images
+   ======================= */
 .section img {
   display: block;
   margin: 32px auto 24px auto;
@@ -170,7 +182,9 @@ nav {
   box-shadow: 0 3px 16px rgba(44,54,57,0.10);
 }
 
-/* PROJECT PAGE NAVIGATION ARROWS */
+/* =======================
+   Project Detail Navigation (Arrows Fixed)
+   ======================= */
 .project-detail-nav-wrapper {
   display: flex;
   align-items: center;
@@ -182,7 +196,13 @@ nav {
   flex: 1 1 0;
   min-width: 0;
 }
-.project-arrow {
+
+/* Fixed project navigation arrows */
+.project-fixed-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,14 +216,21 @@ nav {
   transition: color 0.2s;
   user-select: none;
 }
-.project-arrow:hover {
+.project-fixed-arrow.left {
+  left: 24px;
+}
+.project-fixed-arrow.right {
+  right: 24px;
+}
+.project-fixed-arrow:hover {
   color: #2c3639;
 }
+
 @media (max-width: 900px) {
   .project-detail-nav-wrapper {
     gap: 8px;
   }
-  .project-arrow {
+  .project-fixed-arrow {
     font-size: 2rem;
     padding: 0 8px;
   }
@@ -212,13 +239,25 @@ nav {
   .project-detail-nav-wrapper {
     flex-direction: column;
   }
-  .project-arrow {
+  .project-fixed-arrow {
     order: -1;
     margin-bottom: 1em;
+    font-size: 2rem;
+    left: 4px;
+    right: 4px;
+    padding: 0 6px;
+  }
+  .project-fixed-arrow.left {
+    left: 4px;
+  }
+  .project-fixed-arrow.right {
+    right: 4px;
   }
 }
 
-/* --- SERVICES SECTION --- */
+/* =======================
+   Services Section
+   ======================= */
 .services-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -254,7 +293,6 @@ nav {
   color: #f4eada;
   list-style: disc;
 }
-
 .service-notes {
   margin-top: 2rem;
   background: rgba(44,54,57,0.12);
@@ -283,7 +321,9 @@ nav {
   }
 }
 
-/* PORTFOLIO GRID */
+/* =======================
+   Portfolio Grid
+   ======================= */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -292,7 +332,6 @@ nav {
   max-width: 900px;
   justify-content: center;
 }
-
 .portfolio-card {
   display: block;
   background: none;
@@ -304,11 +343,10 @@ nav {
   text-decoration: none;
   color: inherit;
 }
-
 .portfolio-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3; /* or adjust to fit your images */
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 0;
   box-shadow: none;
@@ -316,14 +354,25 @@ nav {
   padding: 0;
   transition: transform 0.2s;
 }
-
-/* Optional: subtle hover zoom */
 .portfolio-card:hover img,
 .portfolio-card:focus img {
   transform: scale(1.03);
 }
+@media (max-width: 600px) {
+  .section .container,
+  .portfolio-grid {
+    padding-left: 3vw !important;
+    padding-right: 3vw !important;
+  }
+  .section img,
+  .portfolio-card img {
+    max-width: 94vw;
+  }
+}
 
-/* FOOTER */
+/* =======================
+   Footer
+   ======================= */
 footer {
   padding: 24px 0 10px 0;
   text-align: center;
@@ -352,14 +401,13 @@ footer .socials a:hover {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  width: 70px; /* Adjust size as needed */
+  width: 70px;
   height: auto;
   z-index: 50;
   opacity: 0.95;
-  pointer-events: none; /* So it doesn't block clicks */
+  pointer-events: none;
   transition: opacity 0.2s;
 }
-
 @media (max-width: 600px) {
   .footer-logo {
     width: 44px;
@@ -368,7 +416,9 @@ footer .socials a:hover {
   }
 }
 
-/* --- Responsive Portfolio Grid --- */
+/* =======================
+   Responsive Portfolio Grid
+   ======================= */
 @media (max-width: 1200px) {
   .portfolio-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -394,7 +444,9 @@ footer .socials a:hover {
   }
 }
 
-/* NAVIGATION MOBILE (unchanged) */
+/* =======================
+   Navigation Mobile
+   ======================= */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -414,119 +466,24 @@ footer .socials a:hover {
   }
   .menu-toggle {
     display: block;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-links a {
+    padding: 12px 0;
+    font-size: 1.08rem;
   }
   .nav-container {
     padding: 20px 10px;
   }
 }
-/* Lightbox Overlay Styles */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-}
 
-.lightbox-img {
-  max-width: 95vw;
-  max-height: 90vh;
-  border-radius: 12px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
-  background: #fff;
-  display: block;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 28px; right: 56px;
-  font-size: 3rem;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10001;
-  user-select: none;
-  transition: color 0.2s;
-}
-.lightbox-close:hover {
-  color: #a27b5b;
-}
-
-@media (max-width: 600px) {
-  .lightbox-close {
-    top: 12px; right: 20px; font-size: 2.2rem;
-  }
-}
-/* Lightbox Overlay Styles */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-}
-.lightbox.show {
-  display: flex;
-}
-.lightbox-img {
-  max-width: 95vw;
-  max-height: 90vh;
-  border-radius: 12px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
-  background: #fff;
-  display: block;
-  z-index: 1;
-}
-.lightbox-close {
-  position: absolute;
-  top: 28px; right: 56px;
-  font-size: 3rem;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10001;
-  user-select: none;
-  transition: color 0.2s;
-}
-.lightbox-close:hover {
-  color: #a27b5b;
-}
-.lightbox-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3rem;
-  color: #fff;
-  cursor: pointer;
-  padding: 8px 18px;
-  z-index: 10001;
-  user-select: none;
-  background: rgba(44,54,57,0.23);
-  border-radius: 50%;
-  transition: background 0.2s, color 0.2s;
-}
-.lightbox-arrow:hover {
-  background: #a27b5b;
-  color: #fff;
-}
-.lightbox-arrow-left {
-  left: 32px;
-}
-.lightbox-arrow-right {
-  right: 32px;
-}
-@media (max-width:600px) {
-  .lightbox-close { top: 10px; right: 12px; font-size: 2rem;}
-  .lightbox-arrow { font-size: 2rem; left: 8px; right: 8px; }
-  .lightbox-arrow-left { left: 8px;}
-  .lightbox-arrow-right { right: 8px;}
-}
+/* =======================
+   Testimonials
+   ======================= */
 .testimonial-grid {
   display: flex;
   gap: 1.2rem;
@@ -587,13 +544,14 @@ footer .socials a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* CONTACT SECTION STYLES */
+/* =======================
+   Contact Section Styles
+   ======================= */
 #contact a,
 #contact a:visited {
   color: white;
   text-decoration: underline;
 }
-
 #contact .socials {
   margin-top: 1.3em;
 }
@@ -607,4 +565,107 @@ footer .socials a:hover {
 }
 #contact .socials a:hover {
   color: #a27b5b;
+}
+.project-info,
+.portfolio-info {
+  text-align: left;
+}
+.portfolio-info ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0.4em;
+}
+.portfolio-info ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+.portfolio-info ul li {
+  text-indent: -1.4em;
+  padding-left: 1.4em;
+}
+
+/* =======================
+   Lightbox
+   ======================= */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.show {
+  display: flex;
+}
+.lightbox-img {
+  max-width: 95vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+  background: #fff;
+  display: block;
+  z-index: 1;
+}
+.lightbox-close {
+  position: absolute;
+  top: 28px; right: 56px;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  user-select: none;
+  transition: color 0.2s;
+}
+.lightbox-close:hover {
+  color: #a27b5b;
+}
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 18px;
+  z-index: 10001;
+  user-select: none;
+  background: rgba(44,54,57,0.23);
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+.lightbox-arrow-left {
+  left: 32px;
+}
+.lightbox-arrow-right {
+  right: 32px;
+}
+.lightbox-arrow:hover {
+  background: #a27b5b;
+  color: #fff;
+}
+@media (max-width:600px) {
+  .lightbox-close { top: 10px; right: 12px; font-size: 2rem;}
+  .lightbox-arrow { font-size: 2rem; left: 8px; right: 8px; }
+  .lightbox-arrow-left { left: 8px;}
+  .lightbox-arrow-right { right: 8px;}
+}
+
+/* =======================
+   Final Mobile Polish
+   ======================= */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.section {
+  scroll-margin-top: 80px;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 1.08rem;
+  }
 }

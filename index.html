@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>True Form Drafting</title>
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+  <!-- Header & Navigation -->
   <header class="header" id="mainHeader">
     <div class="nav-container">
       <a href="index.html" class="logo-link">
@@ -16,9 +18,9 @@
       </a>
       <nav>
         <ul class="nav-links" id="navLinks">
+          <li><a href="#portfolio" id="portfolioLink">Portfolio</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio" id="portfolioLink">Portfolio</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -29,6 +31,7 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -37,6 +40,29 @@
     </div>
   </section>
 
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section light">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <a class="portfolio-card" href="project1.html">
+          <img src="assets/portfolio1.jpg" alt="Project 1">
+        </a>
+        <a class="portfolio-card" href="project2.html">
+          <img src="assets/portfolio2.jpg" alt="Project 2">
+        </a>
+        <a class="portfolio-card" href="project3.html">
+          <img src="assets/portfolio3.jpg" alt="Project 3">
+        </a>
+        <a class="portfolio-card" href="project4.html">
+          <img src="assets/portfolio4.jpg" alt="Project 4">
+        </a>
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
   <section id="about" class="section light">
     <div class="container about-flex">
       <div class="about-text">
@@ -51,6 +77,7 @@
     </div>
   </section>
 
+  <!-- Services Section -->
   <section id="services" class="section dark">
     <div class="container">
       <h2>Services</h2>
@@ -112,27 +139,7 @@
     </div>
   </section>
 
-  <section id="portfolio" class="section light">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        <a class="portfolio-card" href="project1.html">
-          <img src="assets/portfolio1.jpg" alt="Project 1">
-        </a>
-        <a class="portfolio-card" href="project2.html">
-          <img src="assets/portfolio2.jpg" alt="Project 2">
-        </a>
-        <a class="portfolio-card" href="project3.html">
-          <img src="assets/portfolio3.jpg" alt="Project 3">
-        </a>
-        <a class="portfolio-card" href="project4.html">
-          <img src="assets/portfolio4.jpg" alt="Project 4">
-        </a>
-        <!-- Add more cards as needed -->
-      </div>
-    </div>
-  </section>
-
+  <!-- Testimonials Section -->
   <section id="testimonials" class="section light">
     <div class="container">
       <h2>Testimonials</h2>
@@ -162,26 +169,28 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="section dark">
     <div class="container">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:trueformdrafting@gmail.com" style="color: white; text-decoration: none;">trueformdrafting@gmail.com</a></p>
-<div class="socials">
+      <p>Email: <a href="mailto:trueformdrafting@gmail.com" style="color: #f8f8f8; text-decoration: underline;">trueformdrafting@gmail.com</a></p>
+      <div class="socials">
         <a href="https://www.linkedin.com/in/dominiquewegrzak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.facebook.com/trueformdrafting/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-    <a href="https://instagram.com/trueformdrafting" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </a>
+        <a href="https://www.facebook.com/trueformdrafting/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/trueformdrafting" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 True Form Drafting</p>
-          </div>
+    </div>
     <img src="assets/TRUEFORMDrafting Logo short.svg" alt="True Form Drafting Logo" class="footer-logo" />
   </footer>
 
+  <!-- Scripts -->
   <script>
     // Hamburger menu for mobile
     const menuToggle = document.getElementById('menuToggle');
