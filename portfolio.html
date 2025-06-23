@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* Add this to push the title below the sticky header */
+    .heading-offset {
+      margin-top: 60px;
+    }
+    @media (max-width: 600px) {
+      .heading-offset {
+        margin-top: 90px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header project-stripe">
@@ -14,22 +25,22 @@
       <a href="index.html" class="logo-link">
         <img src="assets/TRUEFORMDrafting Logo short.svg" alt="True Form Logo" class="logo" />
       </a>
-     <nav>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" id="portfolioLink" class="active">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <section class="section portfolio-section">
     <div class="container">
-      <h1>Portfolio</h1>
+      <!-- This is the key line: -->
+      <h1 class="heading-offset">Portfolio</h1>
       <p>Explore some of my recent projects below.</p>
       <div class="portfolio-grid">
         <!-- Example Project Card 1 -->
@@ -56,7 +67,7 @@
             <p>Short project description goes here.</p>
           </div>
         </a>
-	  <!-- Example Project Card 4 -->
+        <!-- Example Project Card 4 -->
         <a href="project4.html" class="portfolio-card">
           <img src="assets/portfolio4.jpg" alt="Project 4 Thumbnail" />
           <div class="portfolio-card-info">
@@ -73,9 +84,11 @@
     // Hamburger menu for mobile
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
   </script>
 </body>
 </html>

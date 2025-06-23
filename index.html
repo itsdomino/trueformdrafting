@@ -22,7 +22,6 @@
     <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
@@ -42,24 +41,28 @@
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="section light">
-    <div class="container">
-      <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        <a class="portfolio-card" href="project1.html">
-          <img src="assets/portfolio1.jpg" alt="Project 1">
-        </a>
-        <a class="portfolio-card" href="project2.html">
-          <img src="assets/portfolio2.jpg" alt="Project 2">
-        </a>
-        <a class="portfolio-card" href="project3.html">
-          <img src="assets/portfolio3.jpg" alt="Project 3">
-        </a>
-        <a class="portfolio-card" href="project4.html">
-          <img src="assets/portfolio4.jpg" alt="Project 4">
-        </a>
-        <!-- Add more cards as needed -->
+<!-- Portfolio Section -->
+<section id="portfolio" class="section light">
+  <div class="container">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <a class="portfolio-card" href="project1.html">
+        <img src="assets/portfolio1.jpg" alt="Project 1">
+        <div class="portfolio-title">Airbag System</div>
+      </a>
+      <a class="portfolio-card" href="project2.html">
+        <img src="assets/portfolio2.jpg" alt="Project 2">
+        <div class="portfolio-title">Dynamic Seal</div>
+      </a>
+      <a class="portfolio-card" href="project3.html">
+        <img src="assets/portfolio3.jpg" alt="Project 3">
+        <div class="portfolio-title">Seal Housing</div>
+      </a>
+      <a class="portfolio-card" href="project4.html">
+        <img src="assets/portfolio4.jpg" alt="Project 4">
+        <div class="portfolio-title">Electron Gun</div>
+      </a>
+      <!-- Add more cards as needed -->
     </div>
     <div class="portfolio-link-below">
       <a href="portfolio.html">View the full portfolio here</a>
@@ -71,9 +74,9 @@
   <section id="about" class="section light">
     <div class="container about-flex">
       <div class="about-text">
-	<h2><a href="about.html">About</a></h2>
+	<h2>About</h2>
 	<p>
-          True Form Drafting delivers high-quality 2D drafting and 3D modeling services for mechanical design, prototyping, and fabrication. Based in Whistler, BC, the business supports clients across Canada and internationally, providing clear, build-ready technical drawings that streamline the path from idea to production. With a background in mechanical engineering and hands-on industry experience, True Form Drafting offers reliable support for both businesses and independent inventors.
+          True Form Drafting delivers high-quality 2D drafting and 3D modeling services for mechanical design, prototyping, and fabrication. Based in Whistler, BC, the business supports clients across Canada and internationally, providing clear, build-ready technical drawings that streamline the path from idea to production. With a background in mechanical engineering and hands-on industry experience, True Form Drafting offers reliable support for both businesses and independent inventors. <a href="about.html" class="about-link-inline">Learn more about me</a>
         </p>
       </div>
       <div class="about-photo">
@@ -83,66 +86,33 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="section dark">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="services-list">
-        <div class="service-block">
-          <div class="service-icon">
-            <i class="fas fa-pencil-ruler"></i>
-          </div>
-          <h3>2D Drafting</h3>
-          <p>Detailed technical drawings for parts, assemblies, and fabrication. All drawings are tailored to manufacturing standards and can include dimensions, tolerances, material specs, and title blocks.</p>
-          <ul>
-            <li>Part drawings</li>
-            <li>Assembly drawings</li>
-            <li>Shop/fabrication drawings</li>
-            <li>Exploded views</li>
-            <li>Drawing sets for production</li>
-          </ul>
-        </div>
-        <div class="service-block">
-          <h3>3D Modeling</h3>
-          <p>Parametric CAD models created for design visualization, prototyping, and manufacturing. Models can be exported to various formats for use in production, rendering, or simulation.</p>
-          <ul>
-            <li>Mechanical components</li>
-            <li>Product assemblies</li>
-            <li>Concept-to-CAD modeling</li>
-            <li>Conversion from 2D to 3D</li>
-            <li>Export to STEP, IGES, STL, etc.</li>
-          </ul>
-        </div>
-        <div class="service-block">
-          <h3>Drawing Conversion &amp; Cleanup</h3>
-          <p>Transform sketches, PDFs, or legacy drawings into clean, accurate CAD files. Ideal for updating old designs or preparing new documentation for manufacturing.</p>
-          <ul>
-            <li>Hand sketch to CAD</li>
-            <li>PDF to DWG/DXF</li>
-            <li>Redrawing or cleanup of old files</li>
-            <li>Layer organization and standards compliance</li>
-          </ul>
-        </div>
-        <div class="service-block">
-          <h3>Design Support &amp; Collaboration</h3>
-          <p>Flexible drafting services to support design teams, fabricators, and inventors. Ideal for early-stage development, prototyping, or getting ideas ready for quoting and production.</p>
-          <ul>
-            <li>Design iteration support</li>
-            <li>Prototype-ready drawings</li>
-            <li>Manufacturer-ready documentation</li>
-            <li>Support across concept to production stages</li>
-          </ul>
-        </div>
+<!-- Services Section (Short Overview for Main Site) -->
+<section id="services" class="section dark">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="services-list">
+      <div class="service-block">
+        <h3>2D Drafting</h3>
+        <p>Technical drawings for manufacturing and fabrication.</p>
       </div>
-      <div class="service-notes">
-        <h4>File Standard &amp; Formats:</h4>
-        <ul>
-          <li><strong>File formats supported:</strong> DWG, DXF, SLDPRT, STEP, IGES, STL, etc.</li>
-          <li><strong>Standards followed:</strong>  ISO (metric). Imperial available upon request.</li>
-          <li><strong>Remote collaboration:</strong> Available Canada-wide and internationally</li>
-        </ul>
+      <div class="service-block">
+        <h3>3D Modeling</h3>
+        <p>CAD models for design, prototyping, and production.</p>
+      </div>
+      <div class="service-block">
+        <h3>Drawing Conversion &amp; Cleanup</h3>
+        <p>Convert or clean up sketches, PDFs, or legacy drawings.</p>
+      </div>
+      <div class="service-block">
+        <h3>Design Support &amp; Collaboration</h3>
+        <p>Flexible drafting support for teams, fabricators, and inventors.</p>
       </div>
     </div>
-  </section>
+    <div class="services-link-below">
+      <a href="services.html">See all services &amp; details</a>
+    </div>
+  </div>
+</section>
 
   <!-- Testimonials Section -->
   <section id="testimonials" class="section light">

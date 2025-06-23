@@ -7,6 +7,79 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .contact-section {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(120deg, #f6f7fb 60%, #f0ede7 100%);
+      padding: 40px 0;
+      /* Add this: */
+      margin-top: 60px;
+    }
+    .contact-card {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 40px rgba(100, 80, 30, 0.13);
+      max-width: 420px;
+      width: 95%;
+      padding: 36px 28px;
+      margin: 0 auto;
+      border: 1.5px solid #e6decf;
+      text-align: center;
+    }
+    .contact-card h1 {
+      color: #6e5c3c;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .contact-card p {
+      color: #52422d;
+      margin-bottom: 24px;
+      font-size: 1.08rem;
+    }
+    .contact-details {
+      margin: 24px 0 0 0;
+      font-size: 1.09rem;
+    }
+    .contact-details a {
+      color: #bda98e;
+      text-decoration: none;
+      margin-right: 5px;
+      margin-left: 5px;
+      transition: color 0.18s;
+      font-weight: 600;
+    }
+    .contact-details a:hover {
+      color: #6e5c3c;
+    }
+    .socials {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+    .socials a {
+      color: #7b6a52;
+      font-size: 1.3rem;
+      transition: color 0.2s;
+    }
+    .socials a:hover {
+      color: #bda98e;
+    }
+    @media (max-width: 600px) {
+      .contact-section {
+        margin-top: 90px;
+      }
+      .contact-card {
+        padding: 16px 4vw;
+      }
+      .contact-card h1 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header project-stripe">
@@ -14,58 +87,39 @@
       <a href="index.html" class="logo-link">
         <img src="assets/TRUEFORMDrafting Logo short.svg" alt="True Form Logo" class="logo" />
       </a>
-    <nav>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section class="section light" id="contact">
-    <div class="container">
+  <section class="contact-section">
+    <div class="contact-card">
       <h1>Contact</h1>
-      <p>Have a question or want to discuss your project? Reach out using the form below or the contact details provided.</p>
-      <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
-        <div>
-          <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="email">Email</label><br>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="message">Message</label><br>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
+      <p>Have a question or want to discuss your project?<br>
+         You can reach me directly via email or phone, or connect on social media:</p>
       <div class="contact-details">
-        <p><strong>Email:</strong> <a href="mailto:your@email.com">your@email.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:dominique.wegrzak@googlemail.com">dominique.wegrzak@googlemail.com</a>
+        </p>
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </p>
         <div class="socials">
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
           <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
     </div>
   </section>
-
-  <script>
-    // Hamburger menu for mobile
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>

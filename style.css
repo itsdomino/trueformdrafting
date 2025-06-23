@@ -113,6 +113,7 @@ nav {
    Sections
    ======================= */
 .section {
+  scroll-margin-top: 130px; /* This is the only change: increase if your header is even taller */
   padding: 80px 0;
   text-align: center;
   padding-top: 60px;
@@ -121,11 +122,6 @@ nav {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
-}
-.section {
-  scroll-margin-top: 110px;
-  padding: 80px 0;
-  text-align: center;
 }
 .project-detail-section {
   padding-top: 150px; /* match your sticky header height */
@@ -141,7 +137,7 @@ nav {
 #services.section,
 #testimonials.section,
 #contact.section {
-  padding-top: 150px; /* Match this to your header height */
+  padding-top: 80px; /* Match this to your header height */
 }
 
 /* Alternating Section Backgrounds */
@@ -150,8 +146,6 @@ nav {
 #services.section { background: #2c3639; color: #f4f4f4; }
 #testimonials.section { background: #f4f4f4; }
 #contact.section { background: #2c3639; color: #f4f4f4; }
-
-
 
 /* =======================
    About Section
@@ -225,12 +219,12 @@ nav {
   transform: translateY(-50%);
   z-index: 2000;
   font-size: 2.4rem;
-  color: #222;         /* plane dark color */
-  background: none;    /* remove circle */
-  border: none;        /* no border */
-  box-shadow: none;    /* no shadow */
-  border-radius: 0;    /* no roundness */
-  padding: 0;          /* no extra space around arrow */
+  color: #222;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
   cursor: pointer;
   user-select: none;
   display: flex;
@@ -247,7 +241,7 @@ nav {
 }
 .project-fixed-arrow:hover,
 .project-fixed-arrow:focus {
-  color: #000;   /* slightly darker on hover */
+  color: #000;
   background: none;
 }
 @media (max-width: 900px) {
@@ -278,14 +272,14 @@ nav {
 }
 .portfolio-link-below a {
   font-size: 0.98rem;
-  color: #a27b5b; /* or any brand color you like */
+  color: #a27b5b;
   text-decoration: none;
   letter-spacing: 0.5px;
   font-weight: 600;
   transition: color 0.2s;
 }
 .portfolio-link-below a:hover {
-  color: #134b9e; /* a nice highlight color */
+  color: #134b9e;
   text-decoration: underline;
 }
 /* =======================
@@ -359,10 +353,10 @@ nav {
    ======================= */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin: 30px auto 0 auto;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 36px;
+  margin: 36px auto 0 auto;
+  max-width: 1200px;
   justify-content: center;
 }
 .portfolio-card {
@@ -380,6 +374,8 @@ nav {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
+  min-height: 255px;
+  max-height: 380px;
   object-fit: cover;
   border-radius: 0;
   box-shadow: none;
@@ -391,6 +387,17 @@ nav {
 .portfolio-card:focus img {
   transform: scale(1.03);
 }
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr));
+    max-width: 100vw;
+    gap: 18px;
+  }
+  .portfolio-card img {
+    min-height: 160px;
+    max-height: 220px;
+  }
+}
 @media (max-width: 600px) {
   .section .container,
   .portfolio-grid {
@@ -400,7 +407,19 @@ nav {
   .section img,
   .portfolio-card img {
     max-width: 94vw;
+    min-height: 100px;
+    max-height: 180px;
   }
+}
+.services-link-below a {
+  color: #bda98e;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.services-link-below a:hover,
+.services-link-below a:focus {
+  color: #8d7758;
 }
 
 /* =======================
@@ -695,13 +714,12 @@ html {
   overflow-x: hidden;
 }
 .section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 130px;
 }
 @media (max-width: 600px) {
   body {
     font-size: 1.08rem;
   }
-}
 }
 /* =======================
    About Section — Modern Layout
@@ -728,14 +746,14 @@ html {
 }
 
 .about-photo {
-  flex: 1 1 320px; /* doubled min width for image container */
+  flex: 1 1 320px;
   text-align: center;
 }
 
 .about-photo img {
-  width: 360px;         /* doubled from 240px */
+  width: 360px;
   height: auto;
-  border-radius: 12px;  /* or 0 */
+  border-radius: 12px;
   display: block;
 }
 
@@ -749,7 +767,7 @@ html {
     margin-bottom: 12px;
   }
   .about-photo img {
-    width: 360px;      /* doubled from 220px */
+    width: 360px;
     height: auto;
   }
 }

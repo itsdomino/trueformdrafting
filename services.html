@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    .heading-offset {
+      margin-top: 60px;
+    }
+    @media (max-width: 600px) {
+      .heading-offset {
+        margin-top: 90px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header project-stripe">
@@ -14,62 +24,72 @@
       <a href="index.html" class="logo-link">
         <img src="assets/TRUEFORMDrafting Logo short.svg" alt="True Form Logo" class="logo" />
       </a>
-    <nav>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section class="section" id="services">
+  <!-- Services Section -->
+  <section id="services" class="section dark">
     <div class="container">
-      <h1>Our Services</h1>
-      <p>True Form Drafting offers a broad range of technical drafting and design solutions to help you bring your projects to life.</p>
+      <h2 class="heading-offset">Services</h2>
       <div class="services-list">
-        <div class="service-block">
-          <div class="service-icon"><i class="fas fa-pencil-ruler"></i></div>
-          <h3>2D Technical Drafting</h3>
-          <p>Creation of detailed 2D drawings for fabrication, manufacturing, and documentation using industry standards.</p>
+        <div class="service-block">       
+          <h3>2D Drafting</h3>
+          <p>Detailed technical drawings for parts, assemblies, and fabrication. All drawings are tailored to manufacturing standards and can include dimensions, tolerances, material specs, and title blocks.</p>
+          <ul>
+            <li>Part drawings</li>
+            <li>Assembly drawings</li>
+            <li>Shop/fabrication drawings</li>
+            <li>Exploded views</li>
+            <li>Drawing sets for production</li>
+          </ul>
         </div>
         <div class="service-block">
-          <div class="service-icon"><i class="fas fa-cubes"></i></div>
           <h3>3D Modeling</h3>
-          <p>Development of 3D models for parts, assemblies, and prototypes to visualize and refine your concepts.</p>
+          <p>Parametric CAD models created for design visualization, prototyping, and manufacturing. Models can be exported to various formats for use in production, rendering, or simulation.</p>
+          <ul>
+            <li>Mechanical components</li>
+            <li>Product assemblies</li>
+            <li>Concept-to-CAD modeling</li>
+            <li>Conversion from 2D to 3D</li>
+            <li>Export to STEP, IGES, STL, etc.</li>
+          </ul>
         </div>
         <div class="service-block">
-          <div class="service-icon"><i class="fas fa-tools"></i></div>
-          <h3>Mechanical Design</h3>
-          <p>Mechanical design support for new products or improvements, ensuring functionality and manufacturability.</p>
+          <h3>Drawing Conversion &amp; Cleanup</h3>
+          <p>Transform sketches, PDFs, or legacy drawings into clean, accurate CAD files. Ideal for updating old designs or preparing new documentation for manufacturing.</p>
+          <ul>
+            <li>Hand sketch to CAD</li>
+            <li>PDF to DWG/DXF</li>
+            <li>Redrawing or cleanup of old files</li>
+            <li>Layer organization and standards compliance</li>
+          </ul>
         </div>
         <div class="service-block">
-          <div class="service-icon"><i class="fas fa-file-alt"></i></div>
-          <h3>Documentation & BOMs</h3>
-          <p>Preparation of clear documentation and Bills of Materials (BOMs) to streamline production and communication.</p>
-        </div>
-        <div class="service-block">
-          <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
-          <h3>Drawing Conversion</h3>
-          <p>Converting hand sketches, PDFs, or legacy files into accurate CAD drawings and digital formats.</p>
-        </div>
-        <div class="service-block">
-          <div class="service-icon"><i class="fas fa-industry"></i></div>
-          <h3>Reverse Engineering</h3>
-          <p>Creation of precise CAD models and drawings from physical parts or prototypes for reproduction or redesign.</p>
+          <h3>Design Support &amp; Collaboration</h3>
+          <p>Flexible drafting services to support design teams, fabricators, and inventors. Ideal for early-stage development, prototyping, or getting ideas ready for quoting and production.</p>
+          <ul>
+            <li>Design iteration support</li>
+            <li>Prototype-ready drawings</li>
+            <li>Manufacturer-ready documentation</li>
+            <li>Support across concept to production stages</li>
+          </ul>
         </div>
       </div>
       <div class="service-notes">
-        <h4>Specializations & Software:</h4>
+        <h4>File Standard &amp; Formats:</h4>
         <ul>
-          <li>Experienced in SolidEdge, AutoCAD, and other industry-leading platforms.</li>
-          <li>Custom solutions for each client’s unique requirements.</li>
-          <li>Fast turnaround and clear communication at every project stage.</li>
+          <li><strong>File formats supported:</strong> DWG, DXF, SLDPRT, STEP, IGES, STL, etc.</li>
+          <li><strong>Standards followed:</strong>  ISO (metric). Imperial available upon request.</li>
+          <li><strong>Remote collaboration:</strong> Available Canada-wide and internationally</li>
         </ul>
       </div>
     </div>
@@ -79,9 +99,11 @@
     // Hamburger menu for mobile
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
   </script>
 </body>
 </html>
