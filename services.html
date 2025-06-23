@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | True Form Drafting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header class="header project-stripe">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/TRUEFORMDrafting Logo short.svg" alt="True Form Logo" class="logo" />
+      </a>
+    <nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+    </div>
+  </header>
+
+  <section class="section" id="services">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>True Form Drafting offers a broad range of technical drafting and design solutions to help you bring your projects to life.</p>
+      <div class="services-list">
+        <div class="service-block">
+          <div class="service-icon"><i class="fas fa-pencil-ruler"></i></div>
+          <h3>2D Technical Drafting</h3>
+          <p>Creation of detailed 2D drawings for fabrication, manufacturing, and documentation using industry standards.</p>
+        </div>
+        <div class="service-block">
+          <div class="service-icon"><i class="fas fa-cubes"></i></div>
+          <h3>3D Modeling</h3>
+          <p>Development of 3D models for parts, assemblies, and prototypes to visualize and refine your concepts.</p>
+        </div>
+        <div class="service-block">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>Mechanical Design</h3>
+          <p>Mechanical design support for new products or improvements, ensuring functionality and manufacturability.</p>
+        </div>
+        <div class="service-block">
+          <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Documentation & BOMs</h3>
+          <p>Preparation of clear documentation and Bills of Materials (BOMs) to streamline production and communication.</p>
+        </div>
+        <div class="service-block">
+          <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>Drawing Conversion</h3>
+          <p>Converting hand sketches, PDFs, or legacy files into accurate CAD drawings and digital formats.</p>
+        </div>
+        <div class="service-block">
+          <div class="service-icon"><i class="fas fa-industry"></i></div>
+          <h3>Reverse Engineering</h3>
+          <p>Creation of precise CAD models and drawings from physical parts or prototypes for reproduction or redesign.</p>
+        </div>
+      </div>
+      <div class="service-notes">
+        <h4>Specializations & Software:</h4>
+        <ul>
+          <li>Experienced in SolidEdge, AutoCAD, and other industry-leading platforms.</li>
+          <li>Custom solutions for each client’s unique requirements.</li>
+          <li>Fast turnaround and clear communication at every project stage.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Hamburger menu for mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

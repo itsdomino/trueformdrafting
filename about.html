@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | True Form Drafting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header class="header project-stripe">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/TRUEFORMDrafting Logo short.svg" alt="True Form Logo" class="logo" />
+      </a>
+     <nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+    </div>
+  </header>
+
+  <section class="section light about-section">
+    <div class="container">
+      <div class="about-intro">
+        <img src="assets/profile.jpg" alt="About True Form Drafting" class="about-photo">
+        <div>
+          <h1>About True Form Drafting</h1>
+          <p>
+            True Form Drafting specializes in precise technical drawings, 3D modeling, and drafting solutions for a wide range of industries. With years of experience and a focus on accuracy and innovation, we help clients bring their concepts and projects to life with clarity and confidence.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-highlights">
+        <div class="about-card">
+          <h2>Our Mission</h2>
+          <p>
+            To deliver high-quality drafting services that empower engineers, designers, and manufacturers to achieve their goals efficiently and effectively.
+          </p>
+        </div>
+        <div class="about-card">
+          <h2>Who We Are</h2>
+          <p>
+            Based in [Your Location], our team combines engineering expertise with design creativity. We are passionate about transforming ideas into detailed, manufacturable drawings using industry-standard software and best practices.
+          </p>
+        </div>
+        <div class="about-card">
+          <h2>Why Choose Us?</h2>
+          <ul>
+            <li>Accurate and detailed technical drawings</li>
+            <li>Experience with a wide range of design and drafting software</li>
+            <li>Clear communication and responsive service</li>
+            <li>Commitment to deadlines and quality</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Hamburger menu for mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

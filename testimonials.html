@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials | True Form Drafting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header class="header project-stripe">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/TRUEFORMDrafting Logo short.svg" alt="True Form Logo" class="logo" />
+      </a>
+     <nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html" id="portfolioLink">Portfolio</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+    </div>
+  </header>
+
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h1>What My Clients Say</h1>
+      <p>I'm grateful for the incredible people I've had the chance to work with. Here's what they’ve shared about their experience with True Form Drafting. Thank you for your trust and collaboration!</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Domi supported our team as a 3D designer, creating CAD drawings for our airbag products under the guidance of our lead designer, Aaron. While  most of her collaboration was directly with Aaron, she reliably delivered the technical drawings I requested and contributed to moving our projects forward. I appreciated her accuracy and responsiveness, and I'd be happy to work with her again in the future."</p>
+          <div class="testimonial-author">
+            <img src="assets/testimonial1.jpg" alt="Client 1" />
+            <span>— Marc-André T., Progression Airbags, BC Canada</span>
+          </div>
+
+              <!-- Add more testimonial-card blocks as needed -->
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Hamburger menu for mobile
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

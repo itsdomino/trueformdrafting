@@ -131,12 +131,26 @@ nav {
   padding-top: 150px; /* match your sticky header height */
 }
 
+/* =======================
+   Ensure all main pages start below fixed header
+   ======================= */
+.about-section,
+#about.section,
+.portfolio-section,
+#portfolio.section,
+#services.section,
+#testimonials.section,
+#contact.section {
+  padding-top: 150px; /* Match this to your header height */
+}
+
 /* Alternating Section Backgrounds */
 #portfolio.section { background: #fff; }
 #about.section { background: #f4f4f4; }
 #services.section { background: #2c3639; color: #f4f4f4; }
 #testimonials.section { background: #f4f4f4; }
 #contact.section { background: #2c3639; color: #f4f4f4; }
+
 
 
 /* =======================
@@ -257,6 +271,22 @@ nav {
   .project-fixed-arrow.right {
     right: 3px;
   }
+}
+.portfolio-link-below {
+  margin-top: 24px;
+  text-align: center;
+}
+.portfolio-link-below a {
+  font-size: 0.98rem;
+  color: #a27b5b; /* or any brand color you like */
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.portfolio-link-below a:hover {
+  color: #134b9e; /* a nice highlight color */
+  text-decoration: underline;
 }
 /* =======================
    Services Section
@@ -499,7 +529,7 @@ footer .socials a:hover {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(44,54,57,0.10);
   padding: 1.1rem 0.9rem 0.8rem 0.9rem;
-  max-width: 220px;
+  max-width: 480px;
   flex: 1 1 180px;
   display: flex;
   flex-direction: column;
@@ -671,4 +701,66 @@ html {
   body {
     font-size: 1.08rem;
   }
+}
+}
+/* =======================
+   About Section — Modern Layout
+   ======================= */
+.about-section {
+  background: #f6f7fb;
+  min-height: 100vh;
+  padding: 150px 0 40px 0;
+}
+
+.about-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  flex: 2 1 320px;
+  min-width: 250px;
+}
+
+.about-photo {
+  flex: 1 1 320px; /* doubled min width for image container */
+  text-align: center;
+}
+
+.about-photo img {
+  width: 360px;         /* doubled from 240px */
+  height: auto;
+  border-radius: 12px;  /* or 0 */
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 22px;
+  }
+  .about-photo {
+    margin-bottom: 12px;
+  }
+  .about-photo img {
+    width: 360px;      /* doubled from 220px */
+    height: auto;
+  }
+}
+
+.about-section h2 {
+  margin-top: 0;
+  color: #134b9e;
+  font-size: 2.1rem;
+}
+
+.about-section p {
+  font-size: 1.18rem;
+  margin-top: 8px;
 }
