@@ -282,6 +282,7 @@ nav {
   color: #134b9e;
   text-decoration: underline;
 }
+
 /* =======================
    Services Section
    ======================= */
@@ -834,6 +835,23 @@ html {
 }
 .services-link-below a,
 .services-link-below a:visited,
+.services-link-below a:active,
+.portfolio-link-below a,
+.portfolio-link-below a:visited,
+.portfolio-link-below a:active {
+  color: #bda98e !important;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.services-link-below a:hover,
+.services-link-below a:focus,
+.portfolio-link-below a:hover,
+.portfolio-link-below a:focus {
+  color: #8d7758 !important;
+}
+.services-link-below a,
+.services-link-below a:visited,
 .services-link-below a:active {
   color: #bda98e !important;
   text-decoration: underline;
@@ -842,5 +860,18 @@ html {
 }
 .services-link-below a:hover,
 .services-link-below a:focus {
+  color: #8d7758 !important;
+}
+/* Make Back to Portfolio link match the Services link color */
+.back-link,
+.back-link:visited,
+.back-link:active {
+  color: #bda98e !important;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.back-link:hover,
+.back-link:focus {
   color: #8d7758 !important;
 }
